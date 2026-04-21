@@ -1,0 +1,12 @@
+{
+  "name": "goal-connect-component",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@10",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --parallel dev",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint"
+  }
+}
