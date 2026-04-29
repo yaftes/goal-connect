@@ -2,18 +2,19 @@
   "name": "goal-connect",
   "private": true,
   "version": "0.0.0",
-  "packageManager": "pnpm@10",
+  "packageManager": "pnpm@10.33.2",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "test": "turbo run test",
     "lint": "turbo run lint",
-    "db:push": "pnpm --filter @goal-connect/db db:push"
+    "db:push": "pnpm --filter @goal-connect/db db:push",
+    "db:seed": "pnpm --filter @goal-connect/db db:seed"
   },
   "devDependencies": {
     "turbo": "^2.5.0"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["better-sqlite3"]
+    "onlyBuiltDependencies": ["better-sqlite3", "sharp"]
   }
 }

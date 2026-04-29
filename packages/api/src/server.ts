@@ -1,10 +1,13 @@
 import cors from "cors";
 import express from "express";
 import { db, sql } from "@goal-connect/db";
+import { v1Router } from "./routes/v1.js";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+app.use("/api/v1", v1Router);
 
 app.get("/health", (_req, res) => {
   try {
@@ -26,5 +29,7 @@ app.get("/health", (_req, res) => {
 
 const PORT = Number(process.env.PORT ?? 3005);
 app.listen(PORT, () => {
-  console.log(`goal-connect-api http://localhost:${PORT}/health`);
+  console.log(
+    `goal-connect-api http://localhost:${PORT}/health · /api/v1`,
+  );
 });

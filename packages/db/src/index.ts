@@ -12,5 +12,9 @@ const dbFile =
 const sqlite = new Database(dbFile);
 export const db = drizzle(sqlite, { schema });
 
-export { profiles } from "./schema.js";
+export {
+  connectionRequests,
+  profiles,
+  users,
+} from "./schema.js";
 export { sql } from "drizzle-orm";

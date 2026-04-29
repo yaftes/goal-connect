@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
     "strict": true,
     "skipLibCheck": true,
     "noEmit": true,
     "verbatimModuleSyntax": true,
     "resolveJsonModule": true,
-    "types": ["node"]
+    "types": ["react", "react-dom"]
   },
-  "include": ["src/**/*.ts", "drizzle.config.ts", "scripts/**/*.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
